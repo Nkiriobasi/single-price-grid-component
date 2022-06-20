@@ -16,7 +16,7 @@
 }
 
 body{
-    background: var(--Light-gray);
+    background: #202A44;
     width: 100%;
     height: 100vh;
     padding: 0 1rem;
@@ -25,7 +25,7 @@ body{
 .container{
     max-width: 1092px;
     margin: 0 auto;
-    height: 100vh;
+    height: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,6 +37,7 @@ body{
     width: 580px;
     height: auto;
     background: var(--white-color);
+    border-radius: 5px 5px 0 0;
 }
 
 .top__component-content{
@@ -83,13 +84,14 @@ body{
     width: 290px;
     height: auto;
     background: var(--Grayish-blue-color);
-
+    border-radius: 0 0 0 5px;
 }
 
 .bottom__right__component{
     width: 290px;
     height: auto;
     background: var(--Cyan-color);
+    border-radius: 0 0 5px 0;
 }
 
 .bottom__right__component-content{
@@ -158,4 +160,67 @@ span{
     line-height: 1.4;
     font-size: 0.75rem;
     font-weight: 200;
+}
+
+
+
+@media only screen and (max-width: 620px){
+	body{
+        height: 100%;
+        padding: 1rem; 
+    }
+
+    .container{
+        height: inherit;
+    }
+
+    .top__component{
+        width: 290px;
+    }
+
+    .top__component-content{
+        padding: 1.75rem;
+    }
+
+    .heading-text{
+        height: 22px;
+        font-size: 1.125rem;
+    }
+
+    .subheading-text{
+        font-size: 0.875rem;
+    }
+
+    .p-text{
+        font-size: 0.75rem;
+    }
+
+
+
+
+    .bottom__component-wrapper{
+        flex-direction: column;
+    }
+
+    .bottom__left__component{
+        border-radius: 0;
+    }
+
+    .bottom__right__component{
+        border-radius: 0 0 5px 5px;
+    }
+    
+    .bottom__right__component-content{
+        padding: 1.75rem;
+    }
+
+    .bottom__left__component-content{
+        padding: 1.75rem;
+    }
+
+    .btn{
+        width: 100%;
+        height: 36px;
+        font-size: 12px;
+    }
 }
